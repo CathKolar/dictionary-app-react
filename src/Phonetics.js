@@ -3,7 +3,14 @@ export default function Phonetics({ phonetics }) {
   console.log({ phonetics });
   return (
     <div className="Phonetics">
-      <h2>Hello from Phonetics</h2>
+      <figure>
+        <figcaption>Listen:</figcaption>
+        <audio controls src={phonetics.audio}>
+          Your browser does not support the
+          <code>audio</code> element.
+        </audio>
+      </figure>
+      {phonetics.text}
     </div>
   );
 }

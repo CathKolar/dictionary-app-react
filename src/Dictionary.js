@@ -9,7 +9,6 @@ export default function Dictionary() {
 
   // deal with API response
   function handleResponse(response) {
-    console.log(response.data[0]);
     setResults(response.data[0]);
   }
 
