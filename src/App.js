@@ -19,7 +19,7 @@ function App() {
             target="blank"
             title="GitHub"
           >
-            <span class="link"> Open-source code </span>
+            <span className="link"> Open-source code </span>
           </a>
           by
           <a
@@ -27,7 +27,7 @@ function App() {
             target="blank"
             title="LinkedIn"
           >
-            <span class="link"> Catherine Kolar </span>
+            <span className="link"> Catherine Kolar </span>
           </a>
         </small>
       </footer>
