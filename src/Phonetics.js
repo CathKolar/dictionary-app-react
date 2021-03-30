@@ -2,7 +2,6 @@ import React from "react";
 import "./Phonetics.css";
 
 export default function Phonetics({ phonetics }) {
-  console.log({ phonetics });
   return (
     <div className="Phonetics">
       <div className="phonetic-spelling">{phonetics.text}</div>

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import "dotenv";
-import Results from "./Results";
 import axios from "axios";
+import "dotenv";
+import Photos from "./Photos";
+import Results from "./Results";
+
 import "./Dictionary.css";
 
 export default function Dictionary() {
   let [keyword, setKeyword] = useState("");
   let [results, setResults] = useState(null);
+  let [photos, setPhotos] = useState(null);
 
   // deal with Dictionary API response
   function handleDictionaryResponse(response) {
@@ -15,7 +18,7 @@ export default function Dictionary() {
 
   // deal with Pexels API response
   function handlePexelsResponse(response) {
-    console.log(response);
+    setPhotos(response.data.photos);
   }
 
   //  make API call onSubmit
@@ -28,7 +31,7 @@ export default function Dictionary() {
 
     // pexels API call
     const pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
-    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=1`;
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=12`;
     const headers = { Authorization: `Bearer ${pexelsApiKey}` };
     axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
@@ -52,6 +55,7 @@ export default function Dictionary() {
         <p className="hint">i.e. pterodactyl, chives, quaint, smize...</p>
       </section>
       <Results results={results} />
+      <Photos photos={photos} results={results} />
     </div>
   );
 }
