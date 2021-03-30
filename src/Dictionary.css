@@ -19,3 +19,8 @@
   font-size: 11px;
   margin-top: 5px;
 }
+@media (max-width: 700px) {
+  .Dictionary section {
+    margin: 0 auto;
+  }
+}
