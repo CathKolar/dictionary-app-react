@@ -55,7 +55,7 @@ export default function Dictionary() {
         <p className="hint">i.e. pterodactyl, chives, quaint, smize...</p>
       </section>
       <Results results={results} />
-      <Photos photos={photos} results={results} />
+      <Photos photos={photos}/>
     </div>
   );
 }
