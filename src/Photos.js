@@ -2,7 +2,7 @@ import React from "react";
 import "./Photos.css";
 
 export default function Photos({ photos }) {
-  if (photos) {
+  if (!photos === 0) {
     return (
       <section className="Photos">
         {photos.map(function (photo) {
