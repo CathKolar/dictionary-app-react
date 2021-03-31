@@ -5,6 +5,10 @@
   border-radius: 8px;
   padding: 20px 20px;
 }
+.Dictionary section:empty {
+  display: none;
+}
+
 .Dictionary h1 {
   margin-top: 0;
   font-size: 20px;
