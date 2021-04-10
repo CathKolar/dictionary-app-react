@@ -16,7 +16,8 @@ function App() {
         <small>
           <a
             href="https://github.com/CathKolar/dictionary-app-react"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             title="GitHub"
           >
             <span className="link"> Open-source code </span>
@@ -24,7 +25,8 @@ function App() {
           by
           <a
             href="https://www.linkedin.com/in/catherinekolar/"
-            target="blank"
+            target="_blank"
+            rel="noreferrer"
             title="LinkedIn"
           >
             <span className="link"> Catherine Kolar </span>
